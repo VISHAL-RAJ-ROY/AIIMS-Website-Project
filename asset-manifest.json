@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/AIIMS-Website-Project/static/css/main.a11e43c0.chunk.css",
+    "main.js": "/AIIMS-Website-Project/static/js/main.bd0a5195.chunk.js",
+    "main.js.map": "/AIIMS-Website-Project/static/js/main.bd0a5195.chunk.js.map",
+    "runtime~main.js": "/AIIMS-Website-Project/static/js/runtime~main.62145f63.js",
+    "runtime~main.js.map": "/AIIMS-Website-Project/static/js/runtime~main.62145f63.js.map",
+    "static/js/2.8fd5b4c7.chunk.js": "/AIIMS-Website-Project/static/js/2.8fd5b4c7.chunk.js",
+    "static/js/2.8fd5b4c7.chunk.js.map": "/AIIMS-Website-Project/static/js/2.8fd5b4c7.chunk.js.map",
+    "index.html": "/AIIMS-Website-Project/index.html",
+    "precache-manifest.50f2dd58e974d976f2ef5dcd0512443a.js": "/AIIMS-Website-Project/precache-manifest.50f2dd58e974d976f2ef5dcd0512443a.js",
+    "service-worker.js": "/AIIMS-Website-Project/service-worker.js",
+    "static/css/main.a11e43c0.chunk.css.map": "/AIIMS-Website-Project/static/css/main.a11e43c0.chunk.css.map"
+  }
+}
