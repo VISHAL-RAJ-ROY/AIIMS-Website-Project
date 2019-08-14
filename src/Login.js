@@ -1,12 +1,7 @@
 import React, { Component } from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import Button from '@material-ui/core/Button';
-import AppBar from '@material-ui/core/AppBar';
 import TextField from '@material-ui/core/TextField';
-import Toolbar from '@material-ui/core/Toolbar';
-import IconButton from '@material-ui/core/IconButton';
-import MenuIcon from '@material-ui/icons/Menu';
-import Typography from '@material-ui/core/Typography';
 import Downloadscreen from './Downloadscreen';
 import './index.css';
 
@@ -16,6 +11,7 @@ import DialogContent from '@material-ui/core/DialogContent';
 import DialogContentText from '@material-ui/core/DialogContentText';
 import DialogTitle from '@material-ui/core/DialogTitle';
 import axios from 'axios';
+import Navbar from './Navbar';
 
 const useStyles = makeStyles(theme => ({
     button: {
@@ -142,22 +138,7 @@ class Login extends Component {
                         </Button>
                     </DialogActions>
                 </Dialog>
-                <AppBar position="static">
-                    <Toolbar>
-                        <IconButton
-                            edge="start"
-                            // className={classes.menuButton}
-                            color="inherit"
-                            aria-label="open drawer"
-                        >
-                            <MenuIcon />
-                        </IconButton>
-                        {/* className={classes.title} */}
-                        <Typography  variant="h6"  >
-                            Login
-                        </Typography>
-                    </Toolbar>
-                </AppBar>
+                <Navbar title={"Login"} />
                 <TextField
                     id="standard-with-placeholder"
                     label="Username"

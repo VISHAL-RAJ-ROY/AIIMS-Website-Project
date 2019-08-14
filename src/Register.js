@@ -8,6 +8,7 @@ import Typography from '@material-ui/core/Typography';
 import axios from 'axios';
 import Login from './Login';
 import Inputplace from './Inputplace';
+import Navbar from './Navbar';
 
 import Dialog from '@material-ui/core/Dialog';
 import DialogActions from '@material-ui/core/DialogActions';
@@ -105,21 +106,8 @@ class Register extends Component {
                         </Button>
                     </DialogActions>
                 </Dialog>
-                <AppBar position="static">
-                    <Toolbar>
-                        <IconButton
-                            edge="start"
-                            color="inherit"
-                            aria-label="open drawer"
-                        >
-                            <MenuIcon />
-                        </IconButton>
-                        <Typography variant="h6" noWrap align="center">
-                            Register
-                        </Typography>
-                    </Toolbar>
-                </AppBar>
-                    {this.state.formEntry}
+                <Navbar title={"Register"} />
+                {this.state.formEntry}
             </div>
         );
     }
