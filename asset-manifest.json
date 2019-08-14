@@ -1,14 +1,14 @@
 {
   "files": {
     "main.css": "/AIIMS-Website-Project/static/css/main.a11e43c0.chunk.css",
-    "main.js": "/AIIMS-Website-Project/static/js/main.1e8a30b2.chunk.js",
-    "main.js.map": "/AIIMS-Website-Project/static/js/main.1e8a30b2.chunk.js.map",
+    "main.js": "/AIIMS-Website-Project/static/js/main.d8e4a127.chunk.js",
+    "main.js.map": "/AIIMS-Website-Project/static/js/main.d8e4a127.chunk.js.map",
     "runtime~main.js": "/AIIMS-Website-Project/static/js/runtime~main.62145f63.js",
     "runtime~main.js.map": "/AIIMS-Website-Project/static/js/runtime~main.62145f63.js.map",
-    "static/js/2.e1046fdd.chunk.js": "/AIIMS-Website-Project/static/js/2.e1046fdd.chunk.js",
-    "static/js/2.e1046fdd.chunk.js.map": "/AIIMS-Website-Project/static/js/2.e1046fdd.chunk.js.map",
+    "static/js/2.299bebf7.chunk.js": "/AIIMS-Website-Project/static/js/2.299bebf7.chunk.js",
+    "static/js/2.299bebf7.chunk.js.map": "/AIIMS-Website-Project/static/js/2.299bebf7.chunk.js.map",
     "index.html": "/AIIMS-Website-Project/index.html",
-    "precache-manifest.5722c25b2e2af658929fc43161bd9ebc.js": "/AIIMS-Website-Project/precache-manifest.5722c25b2e2af658929fc43161bd9ebc.js",
+    "precache-manifest.69b59cd6b7e6efd401faf2b4bb988f37.js": "/AIIMS-Website-Project/precache-manifest.69b59cd6b7e6efd401faf2b4bb988f37.js",
     "service-worker.js": "/AIIMS-Website-Project/service-worker.js",
     "static/css/main.a11e43c0.chunk.css.map": "/AIIMS-Website-Project/static/css/main.a11e43c0.chunk.css.map"
   }
