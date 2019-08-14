@@ -1,19 +1,19 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "fbcd3277b8026eda03d1ef3e943a82d7",
+    "revision": "2f68cca3e54ecf33dc14deac32ce6971",
     "url": "/AIIMS-Website-Project/index.html"
   },
   {
-    "revision": "0e4c6f928eb30d0a5062",
+    "revision": "f43b8fead371a6f2c33d",
     "url": "/AIIMS-Website-Project/static/css/main.a11e43c0.chunk.css"
   },
   {
-    "revision": "61ef6b992247b8217753",
-    "url": "/AIIMS-Website-Project/static/js/2.8fd5b4c7.chunk.js"
+    "revision": "cb22a7a967fda6d6b772",
+    "url": "/AIIMS-Website-Project/static/js/2.e1046fdd.chunk.js"
   },
   {
-    "revision": "0e4c6f928eb30d0a5062",
-    "url": "/AIIMS-Website-Project/static/js/main.bd0a5195.chunk.js"
+    "revision": "f43b8fead371a6f2c33d",
+    "url": "/AIIMS-Website-Project/static/js/main.1e8a30b2.chunk.js"
   },
   {
     "revision": "d3afaa487c05697c8f5e",
