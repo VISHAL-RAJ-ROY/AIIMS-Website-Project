@@ -1,19 +1,9 @@
 import React, { Component } from 'react';
-import Button from '@material-ui/core/Button';
-import AppBar from '@material-ui/core/AppBar';
-import Toolbar from '@material-ui/core/Toolbar';
-import IconButton from '@material-ui/core/IconButton';
-import MenuIcon from '@material-ui/icons/Menu';
-import Typography from '@material-ui/core/Typography';
 import axios from 'axios';
 import Login from './Login';
 import Inputplace from './Inputplace';
 import Navbar from './Navbar';
-
-import Dialog from '@material-ui/core/Dialog';
-import DialogActions from '@material-ui/core/DialogActions';
-import DialogTitle from '@material-ui/core/DialogTitle';
-
+import Dialoguebox from './Dialoguebox';
 
 class Register extends Component {
     constructor(props) {
@@ -93,19 +83,7 @@ class Register extends Component {
     render() {
         return (
             <div>
-                <Dialog
-                    open={this.state.isDialogOpen}
-                    onClose={() => this.handleClose()}
-                    aria-labelledby="alert-dialog-title"
-                    aria-describedby="alert-dialog-description"
-                >
-                    <DialogTitle id="alert-dialog-title">{"All Fields are Required!"}</DialogTitle>
-                    <DialogActions>
-                        <Button color="primary" onClick={() => this.handleClose()}>
-                            OK
-                        </Button>
-                    </DialogActions>
-                </Dialog>
+                <Dialoguebox isOpen={this.state.isDialogOpen} handleClose = {()=>this.handleClose()}  />
                 <Navbar title={"Register"} />
                 {this.state.formEntry}
             </div>

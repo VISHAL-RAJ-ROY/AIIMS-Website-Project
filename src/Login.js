@@ -5,13 +5,8 @@ import TextField from '@material-ui/core/TextField';
 import Downloadscreen from './Downloadscreen';
 import './index.css';
 
-import Dialog from '@material-ui/core/Dialog';
-import DialogActions from '@material-ui/core/DialogActions';
-import DialogContent from '@material-ui/core/DialogContent';
-import DialogContentText from '@material-ui/core/DialogContentText';
-import DialogTitle from '@material-ui/core/DialogTitle';
-import axios from 'axios';
 import Navbar from './Navbar';
+import Dialoguebox from './Dialoguebox';
 
 const useStyles = makeStyles(theme => ({
     button: {
@@ -101,49 +96,15 @@ class Login extends Component {
     }
 
     render() {
-        // const classes = useStyles();
-        console.log(this.props.appContext);
         return (
-            // <div>
-            //     <MuiThemeProvider>
             <div>
-                <Dialog
-                    open={this.state.isDialogOpen2}
-                    onClose={()=>this.handleClose2()}
-                    aria-labelledby="alert-dialog-title"
-                    aria-describedby="alert-dialog-description"
-                >
-                    <DialogTitle id="alert-dialog-title">{"Registration Successful!"}</DialogTitle>
-                    <DialogContent>
-                        <DialogContentText id="alert-dialog-description">
-                            You can now LogIn with your credentials.
-                        </DialogContentText>
-                    </DialogContent>
-                    <DialogActions>
-                        <Button color="primary" onClick = {()=>this.handleClose2()}>
-                            OK
-                        </Button>
-                    </DialogActions>
-                </Dialog>
-                <Dialog
-                    open={this.state.isDialogOpen}
-                    onClose={()=>this.handleClose()}
-                    aria-labelledby="alert-dialog-title"
-                    aria-describedby="alert-dialog-description"
-                >
-                    <DialogTitle id="alert-dialog-title">{"All Fields are Required!"}</DialogTitle>
-                    <DialogActions>
-                        <Button color="primary" onClick = {()=>this.handleClose()}>
-                            OK
-                        </Button>
-                    </DialogActions>
-                </Dialog>
+                <Dialoguebox isOpen = {this.state.isDialogOpen2} title = "Registration Successful!" handleClose = {()=>this.handleClose2()} content = "You can now LogIn with your credentials." />
+                <Dialoguebox isOpen = {this.state.isDialogOpen} handleClose = {()=>this.handleClose()} />
                 <Navbar title={"Login"} />
                 <TextField
                     id="standard-with-placeholder"
                     label="Username"
                     placeholder="Enter your Username"
-                    // className={classes.textField}
                     margin="normal"
                     onChange={(event) => this.setState({ username: event.target.value })}
                 />
@@ -152,7 +113,6 @@ class Login extends Component {
                     id="standard-with-placeholder"
                     label="Role"
                     placeholder="Enter your Role"
-                    // className={classes.textField}
                     margin="normal"
                     onChange={(event) => { console.log(event.target.value); this.setState({ role: event.target.value }) }}
                 />
@@ -160,19 +120,15 @@ class Login extends Component {
                 <TextField
                     id="standard-password-input"
                     label="Password"
-                    // className={classes.textField}
                     type="password"
                     autoComplete="current-password"
                     margin="normal"
                     onChange={(event) => this.setState({ password: event.target.value })}
                 />
                 <br />
-                {/* //className={classes.button} */}
                 <br />
                 <ContainedButtons func={this.props.parentContext} self={this}/>
             </div>
-            //     </MuiThemeProvider>
-            // </div>
         );
     }
 }

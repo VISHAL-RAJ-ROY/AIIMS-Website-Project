@@ -1,12 +1,8 @@
 import React, { Component } from 'react';
-import Button from '@material-ui/core/Button';
 import Login from './Login';
 import Register from './Register';
 import Landingpage from './Landingpage';
-
-import Dialog from '@material-ui/core/Dialog';
-import DialogActions from '@material-ui/core/DialogActions';
-import DialogTitle from '@material-ui/core/DialogTitle';
+import Dialoguebox from './Dialoguebox';
 
 class Loginscreen extends Component {
     constructor(props) {
@@ -59,25 +55,11 @@ class Loginscreen extends Component {
         console.log(this.props.appContext);
         return (
             <div className="loginscreen">
-                <Dialog
-                    open={this.state.isDialogOpenLogOut}
-                    onClose={() => this.handleCloseLogOut()}
-                    aria-labelledby="alert-dialog-title"
-                    aria-describedby="alert-dialog-description"
-                >
-                    <DialogTitle id="alert-dialog-title">{"Successfully Logged Out!"}</DialogTitle>
-                    <DialogActions>
-                        <Button color="primary" onClick={() => this.handleCloseLogOut()}>
-                            OK
-                        </Button>
-                    </DialogActions>
-                </Dialog>
+                <Dialoguebox isOpen = {this.state.isDialogOpenLogOut} title = "Successfully Logged Out!" handleClose = {()=>this.handleCloseLogOut()} />
                 {this.state.loginscreen}
             </div>
         );
     }
 }
-const style = {
-    margin: 15,
-};
+
 export default Loginscreen;
