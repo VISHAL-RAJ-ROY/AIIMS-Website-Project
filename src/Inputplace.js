@@ -31,6 +31,7 @@ import Simpleselect from './Simpleselect';
                   placeholder="Enter Name"
                   // className={classes.textField}
                   margin="normal"
+                  multiline
                   value = {this.state.name}
                   onChange={(event) => { this.setState({name : event.target.value }); this.props.parent.setState({ name: event.target.value }); } }
               />
@@ -41,6 +42,7 @@ import Simpleselect from './Simpleselect';
                   placeholder="Enter your Email"
                   // className={classes.textField}
                   margin="normal"
+                  multiline
                   value = {this.state.email}
                   onChange={(event) => { this.setState({email:event.target.value});this.props.parent.setState({ email: event.target.value })} }
               />
@@ -51,6 +53,7 @@ import Simpleselect from './Simpleselect';
                   placeholder="Enter your Institute"
                   // className={classes.textField}
                   margin="normal"
+                  multiline
                   value = {this.state.affiliation}
                   onChange={(event) => { this.setState({affiliation:event.target.value});this.props.parent.setState({ affiliation: event.target.value })} }
               />
@@ -61,6 +64,8 @@ import Simpleselect from './Simpleselect';
                   id="standard-with-placeholder"
                   label="Address"
                   placeholder="Enter your Address"
+                  multiline
+                  multiline
                   // className={classes.textField}
                   margin="normal"
                   value = {this.state.address}
@@ -73,6 +78,7 @@ import Simpleselect from './Simpleselect';
                   placeholder="Enter your Country"
                   // className={classes.textField}
                   margin="normal"
+                  multiline
                   value = {this.state.country}
                   onChange={(event) => { this.setState({country:event.target.value});this.props.parent.setState({ country: event.target.value })} }
               />
@@ -80,9 +86,11 @@ import Simpleselect from './Simpleselect';
               <TextField
                   id="standard-with-placeholder"
                   label="Mission"
+                  multiline
                   placeholder="We would love to know why are you here?"
                   // className={classes.textField}
                   margin="normal"
+                  multiline
                   value = {this.state.purpose}
                   onChange={(event) => { this.setState({purpose:event.target.value});this.props.parent.setState({ purpose: event.target.value })} }
               />
