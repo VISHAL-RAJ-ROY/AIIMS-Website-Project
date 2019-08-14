@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/AIIMS-Website-Project/precache-manifest.69b59cd6b7e6efd401faf2b4bb988f37.js"
+  "/AIIMS-Website-Project/precache-manifest.fff0b545fffdd37b9d4f5b7ad08a8f94.js"
 );
 
 self.addEventListener('message', (event) => {

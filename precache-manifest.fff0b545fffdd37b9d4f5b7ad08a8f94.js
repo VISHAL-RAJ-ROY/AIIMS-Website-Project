@@ -1,6 +1,6 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "e6d7194e7ebae00156b136fdda67215b",
+    "revision": "0d1d7a9d60da5702dc6f3443e00acfd6",
     "url": "/AIIMS-Website-Project/index.html"
   },
   {
