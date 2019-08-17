@@ -3,6 +3,7 @@ import { makeStyles } from '@material-ui/core/styles';
 import Button from '@material-ui/core/Button';
 import TextField from '@material-ui/core/TextField';
 import Downloadscreen from './Downloadscreen';
+import Simpleselect from './Simpleselect';
 import './index.css';
 
 import Navbar from './Navbar';
@@ -40,7 +41,7 @@ class Login extends Component {
             isDialogOpen:false,
             // toFill: [],
             username: '',
-            role: '',
+            position: '',
             password: ''
         }
     }
@@ -50,10 +51,10 @@ class Login extends Component {
         var self = this;
         var payload = {
             "email": this.state.username,
-            "role": this.state.role,
+            "position": this.state.position,
             "password": this.state.password
         }
-        console.log(this.state.role);
+        console.log(this.state.position);
         // axios.post(apiBaseUrl + 'login', payload)
         //     .then(function (response) {
         //         console.log(response);
@@ -76,7 +77,7 @@ class Login extends Component {
         //         console.log(error);
         //     });
         // TESTING
-        if( this.state.username == '' || this.state.role == '' || this.state.password == '' ) {
+        if( this.state.username == '' || this.state.position == '' || this.state.password == '' ) {
             this.setState({isDialogOpen:true});
         }
         else {
@@ -101,6 +102,7 @@ class Login extends Component {
                 <Dialoguebox isOpen = {this.state.isDialogOpen2} title = "Registration Successful!" handleClose = {()=>this.handleClose2()} content = "You can now LogIn with your credentials." />
                 <Dialoguebox isOpen = {this.state.isDialogOpen} handleClose = {()=>this.handleClose()} />
                 <Navbar title={"Login"} />
+                <br/>
                 <TextField
                     id="standard-with-placeholder"
                     label="Username"
@@ -109,14 +111,16 @@ class Login extends Component {
                     onChange={(event) => this.setState({ username: event.target.value })}
                 />
                 <br/>
-                <TextField
+                {/* <TextField
                     id="standard-with-placeholder"
                     label="Role"
                     placeholder="Enter your Role"
                     margin="normal"
                     onChange={(event) => { console.log(event.target.value); this.setState({ role: event.target.value }) }}
-                />
-                <br />
+                /> */}
+                <br/>
+                <Simpleselect labelText={"Position"} handlePosition = {(value)=>{ this.setState({position:value});}}/>
+                <br/>
                 <TextField
                     id="standard-password-input"
                     label="Password"

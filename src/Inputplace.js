@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import TextField from '@material-ui/core/TextField';
 import ContainedButtons from './ContainedButtons';
 import Simpleselect from './Simpleselect';
+import Termscheckbox from './Termscheckbox';
 
   class Inputplace extends Component {
     constructor(props) {
@@ -95,6 +96,9 @@ import Simpleselect from './Simpleselect';
                   onChange={(event) => { this.setState({purpose:event.target.value});this.props.parent.setState({ purpose: event.target.value })} }
               />
               <br />
+              <br/>
+              <Termscheckbox text="I take oath to to treat the ill to the best of one's ability, to preserve a patient's privacy." handleChangeCheckbox = {()=>this.props.parent.handleChangeCheckbox()}/>
+              <br/>
               <br/>
               <ContainedButtons func={this.props.parent.props.parentContext} self={this.props.parent} refreshRegister = {()=>this.refreshRegister()}/>
           </div>

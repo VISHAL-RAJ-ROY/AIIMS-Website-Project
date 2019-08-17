@@ -10,6 +10,7 @@ class Register extends Component {
         super(props);
         this.state = {
             isDialogOpen: false,
+            isDialogOpen2 : false,
             email: '',
             name : '',
             affiliation : '',
@@ -17,6 +18,7 @@ class Register extends Component {
             address : '',
             country : '',
             purpose : '',
+            isChecked : false,
             formEntry : []
         }
     }
@@ -63,6 +65,9 @@ class Register extends Component {
         if (this.state.position == '' || this.state.email == '' || this.state.purpose == '' || this.state.name == '' || this.state.affiliation == '' || this.state.country == '' || this.state.address == '') {
             this.setState({ isDialogOpen: true });
         }
+        else if( !this.state.isChecked ) {
+            this.setState({isDialogOpen2 : true});
+        }
         else {
             var loginscreen = [];
             loginscreen.push(<Login registrationSuccess={true} parentContext={this.props.parentContext} appContext={this.props.appContext} key={1} />);
@@ -80,10 +85,19 @@ class Register extends Component {
         this.setState({ isDialogOpen: false });
     }
 
+    handleClose2() {
+        this.setState({ isDialogOpen2: false });
+    }
+
+    handleChangeCheckbox() {
+        this.setState({isChecked : !this.state.isChecked});
+    }
+
     render() {
         return (
             <div>
                 <Dialoguebox isOpen={this.state.isDialogOpen} handleClose = {()=>this.handleClose()}  />
+                <Dialoguebox isOpen={this.state.isDialogOpen2} handleClose = {()=>this.handleClose2()} content = "Please accept the terms and conditions :)" />
                 <Navbar title={"Register"} />
                 {this.state.formEntry}
             </div>
