@@ -32,8 +32,8 @@ class Register extends Component {
     handleClick() {
         var apiBaseUrl = "http://localhost:4000/api/";
         console.log("values", this.state.first_name, this.state.last_name, this.state.email, this.state.role);
-        //To be done:check for empty values before hitting submit
         var self = this;
+        console.log(self);
         var payload = {
             "name": this.state.name,
             "position": this.state.position,
@@ -43,25 +43,6 @@ class Register extends Component {
             "email": this.state.email,
             "address": this.state.address,
         }
-        //     axios.post(apiBaseUrl+'/register', payload)
-        //     .then(function (response) {
-        //         console.log(response);
-        //         if(response.data.code == 200){
-        //         //  console.log("registration successfull");
-        //         var loginscreen=[];
-        //         loginscreen.push(<Login parentContext={this}/>);
-        //         var loginmessage = "Not Registered yet.Go to registration";
-        //         self.props.parentContext.setState({loginscreen:loginscreen,
-        //         loginmessage:loginmessage,
-        //         buttonLabel:"Register",
-        //         isLogin:true
-        //             });
-        //         }
-        // })
-        // .catch(function (error) {
-        //     console.log(error);
-        // });
-        // TESTING
         if (this.state.position == '' || this.state.email == '' || this.state.purpose == '' || this.state.name == '' || this.state.affiliation == '' || this.state.country == '' || this.state.address == '') {
             this.setState({ isDialogOpen: true });
         }
@@ -69,15 +50,24 @@ class Register extends Component {
             this.setState({isDialogOpen2 : true});
         }
         else {
-            var loginscreen = [];
-            loginscreen.push(<Login registrationSuccess={true} parentContext={this.props.parentContext} appContext={this.props.appContext} key={1} />);
-            var loginmessage = "Not Registered yet, Go to registration.";
-            this.props.parentContext.setState({
-                loginscreen: loginscreen,
-                loginmessage: loginmessage,
-                buttonLabel: "Register",
-                isLogin: true
-            });
+            axios.post('http://localhost:5000/api/sendmail', payload)
+            .then(function(response) {
+                console.log('andar hai',response);
+                if(response.status == 200){
+                    var loginscreen = [];
+                    loginscreen.push(<Login registrationSuccess={true} parentContext={self.props.parentContext} appContext={self.props.appContext} key={1} />);
+                    var loginmessage = "Not Registered yet, Go to registration.";
+                    self.props.parentContext.setState({
+                        loginscreen: loginscreen,
+                        loginmessage: loginmessage,
+                        buttonLabel: "Register",
+                        isLogin: true
+                    });
+                }
+            })
+            .catch(function (error) {
+                    console.log(error);
+                });
         }
     }
 
