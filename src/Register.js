@@ -50,10 +50,10 @@ class Register extends Component {
             this.setState({isDialogOpen2 : true});
         }
         else {
-            axios.post('http://localhost:5000/api/sendmail', payload)
-            .then(function(response) {
-                console.log('andar hai',response);
-                if(response.status == 200){
+            // axios.post('http://localhost:5000/api/sendmail', payload)
+            // .then(function(response) {
+            //     console.log('andar hai',response);
+            //     if(response.status == 200){
                     var loginscreen = [];
                     loginscreen.push(<Login registrationSuccess={true} parentContext={self.props.parentContext} appContext={self.props.appContext} key={1} />);
                     var loginmessage = "Not Registered yet, Go to registration.";
@@ -63,11 +63,11 @@ class Register extends Component {
                         buttonLabel: "Register",
                         isLogin: true
                     });
-                }
-            })
-            .catch(function (error) {
-                    console.log(error);
-                });
+            //     }
+            // })
+            // .catch(function (error) {
+            //         console.log(error);
+            //     });
         }
     }
 

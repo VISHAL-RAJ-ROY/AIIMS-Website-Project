@@ -19,15 +19,11 @@ class Main extends Component {
                   loginPage:loginPage
                     })
   }
-  componentDidMount() {
-    fetch('http://localhost:5000/api/customers') 
-      .then( res => { console.log(res); return res.json()} )
-        .then(customers => this.setState({customers:customers}, ()=>console.log('Customers fetched..',customers)));
-    // axios.get('http://localhost:5000/api/customers')
-    //   .then( res => { console.log(res); return res.json()} )
-    //     .then(customers => this.setState({customers:customers}, ()=>console.log('Customers fetched..',customers)));
-  
-  }
+  // componentDidMount() {
+  //   fetch('http://localhost:5000/api/customers') 
+  //     .then( res => { console.log(res); return res.json()} )
+  //       .then(customers => this.setState({customers:customers}, ()=>console.log('Customers fetched..',customers)));
+  // }
   render() {
     console.log('here',this.state.customers[0], typeof this.state.customers);
     return (
